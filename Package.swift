@@ -16,13 +16,13 @@ let package = Package(
 		.target(name: "GXDataLayerLocalWrapper",
 				dependencies: [
 					"GXDataLayerLocal",
-					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.iOS, .tvOS, .watchOS]))
+					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.iOS, .watchOS, .tvOS]))
 				],
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXDataLayerLocal",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXDataLayerLocal-1.0.0-beta+20230420132651.xcframework.zip",
-			checksum: "0f4c823b6e1c4409049965a91b2b31324daaba46028f944fad42a51e7fb43e35"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXDataLayerLocal-1.0.0-beta+20230424185248.xcframework.zip",
+			checksum: "84706b9d8b87cd31dcfce19cc78bc85d727306fb8445364c56ccd2747ac8f6d1"
 		)
 	]
 )
