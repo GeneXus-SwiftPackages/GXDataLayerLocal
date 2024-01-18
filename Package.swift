@@ -3,14 +3,14 @@ import PackageDescription
 
 let package = Package(
 	name: "GXDataLayerLocal",
-	platforms: [.iOS("12.0"), .watchOS("5.0"), .tvOS("12.0")],
+	platforms: [.iOS("12.0"), .watchOS("9.0"), .tvOS("12.0")],
 	products: [
 		.library(
 			name: "GXDataLayerLocal",
 			targets: ["GXDataLayerLocalWrapper"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "1.4.0-rc.10")
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "1.4.0-rc.21")
 	],
 	targets: [
 		.target(name: "GXDataLayerLocalWrapper",
@@ -21,8 +21,8 @@ let package = Package(
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXDataLayerLocal",
-			url: "https://pkgs.genexus.dev/iOS/preview/GXDataLayerLocal-1.4.0-rc.10.xcframework.zip",
-			checksum: "d11ac5a9a798afee0009f032585053a80ec38083427ee2e6d2fe345ac5baded9"
+			url: "https://pkgs.genexus.dev/iOS/preview/GXDataLayerLocal-1.4.0-rc.21.xcframework.zip",
+			checksum: "936c48e348363c6075be725a1970314aa23dbe40289f9269d72d8948ff0adfee"
 		)
 	]
 )
