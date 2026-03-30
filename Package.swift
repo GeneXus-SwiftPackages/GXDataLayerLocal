@@ -1,28 +1,28 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
 	name: "GXDataLayerLocal",
-	platforms: [.iOS("12.0"), .watchOS("5.0"), .tvOS("12.0")],
+	platforms: [.iOS("15.0"), .watchOS("10.0"), .tvOS("18.0"), .visionOS("2.0")],
 	products: [
 		.library(
 			name: "GXDataLayerLocal",
 			targets: ["GXDataLayerLocalWrapper"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "1.1.0")
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "4.2.0-rc.0")
 	],
 	targets: [
 		.target(name: "GXDataLayerLocalWrapper",
 				dependencies: [
 					"GXDataLayerLocal",
-					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.tvOS, .iOS, .watchOS]))
+					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.iOS, .watchOS, .tvOS, .visionOS]))
 				],
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXDataLayerLocal",
-			url: "https://pkgs.genexus.dev/iOS/releases/GXDataLayerLocal-1.1.0.xcframework.zip",
-			checksum: "52f15562b541f0c654fc16678bfb9ca5ae8b8559caf1d8e509859bdd3c2d1c10"
+			url: "https://pkgs.genexus.dev/iOS/preview/GXDataLayerLocal-4.2.0-rc.0.xcframework.zip",
+			checksum: "ae17a30b1890d61a1cb374b1b06bf43f26b9de4e1540358fb4e9e5a2ccdc8801"
 		)
 	]
 )
