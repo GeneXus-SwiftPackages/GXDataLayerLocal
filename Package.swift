@@ -10,7 +10,7 @@ let package = Package(
 			targets: ["GXDataLayerLocalWrapper"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "4.2.0-beta.24")
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "4.2.0-beta.25")
 	],
 	targets: [
 		.target(name: "GXDataLayerLocalWrapper",
@@ -21,8 +21,8 @@ let package = Package(
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXDataLayerLocal",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXDataLayerLocal-4.2.0-beta.24.xcframework.zip",
-			checksum: "0be924e49cf3bc8863944a2d10e18791aee242e53fb9cb7e7fbfadabf7972999"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXDataLayerLocal-4.2.0-beta.25.xcframework.zip",
+			checksum: "75bc8b21d9b34800ba268f4e4066f6ca4ea92d369bd216f1467285c2fa732246"
 		)
 	]
 )
